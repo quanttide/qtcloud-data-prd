@@ -9,4 +9,4 @@ parts:
     - file: features/collection/tracking.md
 - caption: 竞品调研
   chapters:
-  - file: competitors/README.mdcompetitors/airflow.md
+  - file: competitors/airflow.md
