@@ -1,0 +1,12 @@
+format: jb-book
+root: index.md
+parts:
+- caption: 产品特性
+  chapters:
+  - url: https://www.figma.com/file/SXfo2E7RPsockMJ74aNNI0/%E9%87%8F%E6%BD%AE%E6%95%B0%E6%8D%AE%E4%BA%91%E7%94%A8%E6%88%B7%E6%95%85%E4%BA%8B%E5%9C%B0%E5%9B%BE?type=whiteboard&node-id=0%3A1&t=JXVqq4vc3gOPxYsv-1
+  - file: features/collection/README.md
+    sections:
+    - file: features/collection/tracking.md
+- caption: 竞品调研
+  chapters:
+  - file: competitors/README.mdcompetitors/airflow.md
