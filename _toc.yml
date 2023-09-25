@@ -1,13 +1,22 @@
 format: jb-book
 root: index.md
 parts:
-- caption: 产品特性
+- caption: 全景图
   chapters:
   - url: https://www.figma.com/file/SXfo2E7RPsockMJ74aNNI0/%E9%87%8F%E6%BD%AE%E6%95%B0%E6%8D%AE%E4%BA%91%E7%94%A8%E6%88%B7%E6%95%85%E4%BA%8B%E5%9C%B0%E5%9B%BE?type=whiteboard&node-id=0%3A1&t=JXVqq4vc3gOPxYsv-1
-    title: 全景图
-  - file: features/collection/README.md
-    sections:
-    - file: features/collection/monitoring.md
-- caption: 竞品调研
+    title: 用户故事地图
+  - url: https://www.figma.com/file/MIOFok8J7Wc8ULbg9ygVcR/%E9%87%8F%E6%BD%AE%E6%95%B0%E6%8D%AE%E4%BA%91%E4%BA%8B%E4%BB%B6%E9%A3%8E%E6%9A%B4?type=whiteboard&node-id=0%3A1&t=XEOPsuTCH6Yd7M6J-1
+    title: 事件风暴
+- caption: 用户画像
+  chapters: 
+  - file: personas/quanttide.md
+- caption: 产品特性
   chapters:
-  - file: competitors/airflow.md
+  - file: features/datasets/README.md
+  - file: features/collecting/README.md
+    sections:
+    - file: features/collecting/monitoring.md
+- caption: 产品原型
+  chapters:
+  - url: https://www.figma.com/file/MjHDuyfXEA5Wu3mmJGXFpA/%E9%87%8F%E6%BD%AE%E6%95%B0%E6%8D%AE%E4%BA%91%E4%BA%A7%E5%93%81%E5%8E%9F%E5%9E%8B?type=design&node-id=0%3A1&mode=design&t=kX6DExrOJK8t04E7-1
+    title: Figma设计稿
