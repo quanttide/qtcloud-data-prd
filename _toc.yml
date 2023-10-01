@@ -9,9 +9,13 @@ parts:
     title: 事件风暴
 - caption: 用户画像
   chapters: 
-  - file: personas/quanttide.md
+  - file: personas/README.md
+  - file: personas/engineers.md
+  - file: personas/analysts.md
+  - file: personas/managers.md
 - caption: 产品特性
   chapters:
+  - file: features/README.md
   - file: features/datasets/README.md
   - file: features/applications/README.md
   - file: features/collecting/README.md
