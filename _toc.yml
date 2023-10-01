@@ -16,15 +16,22 @@ parts:
 - caption: 产品特性
   chapters:
   - file: features/README.md
-  - file: features/datasets/README.md
-  - file: features/applications/README.md
-  - file: features/collectors/README.md
+  - file: features/entities/README.md
     sections:
-    - file: features/collectors/monitoring.md
-  - file: features/processors/README.md
-  - file: features/analysts/README.md
-  - file: features/visualizers/README.md
-  - file: features/workflows/README.md
+    - file: features/entities/datasets/README.md
+    - file: features/entities/applications/README.md
+  - file: features/handlers/README.md
+    sections:
+    - file: features/handlers/collectors/README.md
+      sections: 
+      - file: features/handlers/collectors/monitoring.md
+    - file: features/handlers/processors/README.md
+    - file: features/handlers/analysts/README.md
+    - file: features/handlers/visualizers/README.md
+  - file: features/orchestrators/README.md
+    sections: 
+    - file: features/orchestrators/workflows/README.md
+  - file: features/dataops/README.md
 - caption: 产品原型
   chapters:
   - url: https://www.figma.com/file/MjHDuyfXEA5Wu3mmJGXFpA/%E9%87%8F%E6%BD%AE%E6%95%B0%E6%8D%AE%E4%BA%91%E4%BA%A7%E5%93%81%E5%8E%9F%E5%9E%8B?type=design&node-id=0%3A1&mode=design&t=kX6DExrOJK8t04E7-1

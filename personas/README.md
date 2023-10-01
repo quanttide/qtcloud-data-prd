@@ -1,6 +1,6 @@
 # 用户画像概述
 
-我们将用户分为三类角色：数据工程师、数据分析师和管理者。
+我们将用户分为三类角色：数据工程师、数据分析师和团队管理者。
 
 We classify users into three roles: Data Engineers, Data Analysts, and Managers.
 
