@@ -16,10 +16,10 @@ parts:
 - caption: 产品特性
   chapters:
   - file: features/README.md
-  - file: features/entities/README.md
+  - file: features/deliveries/README.md
     sections:
-    - file: features/entities/datasets/README.md
-    - file: features/entities/applications/README.md
+    - file: features/deliveries/datasets/README.md
+    - file: features/deliveries/applications/README.md
   - file: features/handlers/README.md
     sections:
     - file: features/handlers/collectors/README.md
