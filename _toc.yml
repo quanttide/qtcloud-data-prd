@@ -30,7 +30,8 @@ parts:
     - file: features/handlers/visualizers/README.md
   - file: features/orchestrators/README.md
     sections: 
-    - file: features/orchestrators/workflows/README.md
+    - file: features/orchestrators/controllability/README.md
+    - file: features/orchestrators/observability/README.md
   - file: features/dataops/README.md
 - caption: 产品原型
   chapters:
