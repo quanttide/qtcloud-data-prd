@@ -1,0 +1,602 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>数据工程师 &#8212; 量潮数据云产品策划文档</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'personas/engineers';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="数据分析师" href="analysts.html" />
+    <link rel="prev" title="用户画像概述" href="README.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">量潮数据云产品策划文档</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    产品简介
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">全景图</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://www.figma.com/file/SXfo2E7RPsockMJ74aNNI0/%E9%87%8F%E6%BD%AE%E6%95%B0%E6%8D%AE%E4%BA%91%E7%94%A8%E6%88%B7%E6%95%85%E4%BA%8B%E5%9C%B0%E5%9B%BE?type=whiteboard&amp;node-id=0%3A1&amp;t=JXVqq4vc3gOPxYsv-1">用户故事地图</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.figma.com/file/MIOFok8J7Wc8ULbg9ygVcR/%E9%87%8F%E6%BD%AE%E6%95%B0%E6%8D%AE%E4%BA%91%E4%BA%8B%E4%BB%B6%E9%A3%8E%E6%9A%B4?type=whiteboard&amp;node-id=0%3A1&amp;t=XEOPsuTCH6Yd7M6J-1">事件风暴</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">用户画像</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="README.html">用户画像概述</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">数据工程师</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysts.html">数据分析师</a></li>
+<li class="toctree-l1"><a class="reference internal" href="managers.html">团队管理者</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">产品特性</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../features/README.html">产品特性概述</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../features/deliveries/README.html">管理数据交付物</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../features/deliveries/datasets/README.html">管理数据集</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../features/deliveries/applications/README.html">管理数据应用</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../features/handlers/README.html">管理数据处理器</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../features/handlers/collectors/README.html">管理数据采集器</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../features/handlers/collectors/monitoring.html">监控采集进度</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../features/handlers/processors/README.html">管理数据预处理器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../features/handlers/analysts/README.html">管理数据分析器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../features/handlers/visualizers/README.html">管理数据可视化器</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../features/orchestrators/README.html">管理编排</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../features/orchestrators/controllability/README.html">可控制性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../features/orchestrators/observability/README.html">可观测性</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/dataops/README.html">管理研发流程</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">产品原型</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://www.figma.com/file/MjHDuyfXEA5Wu3mmJGXFpA/%E9%87%8F%E6%BD%AE%E6%95%B0%E6%8D%AE%E4%BA%91%E4%BA%A7%E5%93%81%E5%8E%9F%E5%9E%8B?type=design&amp;node-id=0%3A1&amp;mode=design&amp;t=kX6DExrOJK8t04E7-1">Figma设计稿</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/personas/engineers.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>数据工程师</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">职责</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">技能</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">信息需求</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">教育和背景</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">工作经验</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">工作环境</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">工具和技术</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">挑战和需求</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>数据工程师<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>作为数据工程师，他的职责是设计和实施数据架构、数据流水线和数据处理系统。他致力于确保数据在组织内部的高效、安全和可靠的流动和使用。</p>
+<p>As a data engineer, his role involves designing and implementing data architectures, data pipelines, and data processing systems. He is responsible for ensuring efficient, secure, and reliable flow and utilization of data within an organization.</p>
+<p>为了在这个角色中表现出色，他需要具备数据建模、ETL工具、数据库管理、编程和脚本语言等方面的技能。了解最新的数据处理技术、数据架构设计指南以及数据质量和性能优化技巧是非常重要的。</p>
+<p>To excel in this role, he should possess skills in data modeling, ETL tools, database management, programming, and scripting languages. Staying updated on the latest data processing technologies, data architecture design guidelines, and techniques for data quality and performance optimization is important for him.</p>
+<p>通常情况下，数据工程师通常具备计算机科学、数据科学或相关领域的学士或硕士学位。此外，具备相关的数据工程和架构培训或认证也会被视为加分项。</p>
+<p>Typically, a data engineer holds a bachelor’s or master’s degree in Computer Science, Data Science, or a related field. Additionally, having relevant training or certifications in data engineering and architecture is considered a plus.</p>
+<p>他通常需要具备数年的数据工程经验，参与过数据架构和处理系统的设计和实施。具备处理大规模数据和数据流水线的经验会被优先考虑。</p>
+<p>He should have several years of experience in data engineering, with involvement in the design and implementation of data architectures and processing systems. Experience in handling large-scale data processing and data pipelines is highly valued.</p>
+<p>数据工程师可以在各种规模和行业的组织中工作，包括但不限于科技、金融、零售和制造业。他的工作环境可能涉及与多个团队和部门的合作，需要良好的沟通和协调能力。</p>
+<p>Data engineers can work in organizations of various sizes and industries, including but not limited to technology, finance, retail, and manufacturing. The work environment may involve collaboration with multiple teams and departments, requiring excellent communication and coordination skills.</p>
+<p>他需要熟练使用数据建模工具（如Erwin、PowerDesigner）、ETL工具（如Informatica、Talend）、数据库管理系统（如Oracle、SQL Server、MySQL）以及编程和脚本语言（如Python、Java、Shell）。</p>
+<p>Proficiency in data modeling tools (such as Erwin, PowerDesigner), ETL tools (such as Informatica, Talend), database management systems (such as Oracle, SQL Server, MySQL), and programming and scripting languages (such as Python, Java, Shell) is essential for him.</p>
+<p>在这个角色中，他可能面临处理大规模和多样化数据、确保数据质量和一致性、提高数据处理和查询性能等挑战。为了满足这些挑战，他需要掌握最新的数据处理技术、数据架构设计的最佳实践以及数据质量和性能优化的技巧。</p>
+<p>In this role, he may face challenges such as handling large-scale and diverse datasets, ensuring data quality and consistency, and improving data processing and query performance. To meet these challenges, staying updated on the latest data processing technologies, best practices in data architecture design, and techniques for data quality and performance optimization is crucial.</p>
+<section id="id2">
+<h2>职责<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>作为数据工程师，他们需要具备数据管理和处理的技术和经验，熟悉各种数据存储和处理技术，以及编程和脚本语言。他们需要与其他团队紧密合作，包括数据分析团队、管理团队等，以确保数据工程的顺利进行，并为组织提供高效的数据支持。</p>
+<p>具体包括：</p>
+<ul class="simple">
+<li><p>设计和构建数据架构：数据工程师负责设计和构建数据架构，包括数据库、数据仓库、数据湖等。他们需要根据组织的需求和数据特性，选择合适的数据存储和处理技术，并设计相应的数据模型和架构。</p></li>
+<li><p>构建数据流水线：数据工程师负责构建数据流水线，用于收集、处理和转换数据。他们需要了解数据来源和目标，设计和实现数据传输和转换的流程，确保数据能够按时、准确地流动和转换。</p></li>
+<li><p>开发和维护数据处理系统：数据工程师负责开发和维护数据处理系统，包括ETL（提取、转换和加载）工具、数据处理脚本和作业调度系统等。他们需要编写代码、配置和管理工具，确保数据能够按照预定的规则进行处理和转换。</p></li>
+<li><p>监控和优化数据流程：数据工程师需要监控数据流程的运行情况，及时发现和解决问题。他们还需要优化数据流程，提高数据处理和传输的效率和性能。</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>技能<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>数据工程师需要具备数据处理、编程、数据库管理、大数据技术、数据可视化、数据安全、问题解决、沟通和团队合作等方面的技能。</p>
+<p>具体包括：</p>
+<ul class="simple">
+<li><p>数据处理和转换：熟练使用SQL和其他数据处理工具，能够进行数据清洗、转换和整合，处理各种数据格式和结构。</p></li>
+<li><p>编程和脚本语言：熟悉至少一种编程语言，如Python、Java或Scala，能够编写自动化脚本和数据处理程序。</p></li>
+<li><p>数据库管理：熟悉关系型数据库和非关系型数据库，理解数据库设计和优化原则，能够管理和维护数据库系统。</p></li>
+<li><p>大数据技术：了解大数据技术栈，如Hadoop、Spark、Hive等，能够处理大规模数据和进行分布式计算。</p></li>
+<li><p>数据可视化：熟悉数据可视化工具，如Tableau、Power BI等，能够将数据结果可视化呈现。</p></li>
+<li><p>数据安全和隐私：了解数据安全和隐私保护的基本原则和方法，能够保护数据的机密性和完整性。</p></li>
+<li><p>问题解决和调试能力：具备良好的问题解决和调试能力，能够快速定位和解决数据工程中的问题。</p></li>
+<li><p>沟通和团队合作：良好的沟通能力和团队合作精神，能够与其他团队成员、业务方和管理层进行有效的沟通和协作。</p></li>
+<li><p>持续学习和自我提升：对新技术和工具持续保持学习和探索的态度，不断提升自己的技能和知识。</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2>信息需求<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>需要及时了解和掌握数据工程领域的最新技术和趋势</p></li>
+<li><p>需要获取相关案例和实践经验，以便应用到实际工作中</p></li>
+<li><p>需要学习和了解数据工程相关的最佳实践和方法论</p></li>
+</ul>
+</section>
+<section id="id5">
+<h2>教育和背景<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>学士或硕士学位，专业背景可以是计算机科学、数据科学、统计学等相关领域</p></li>
+<li><p>相关培训经历或认证，如数据工程师认证、数据库管理员认证等</p></li>
+</ul>
+</section>
+<section id="id6">
+<h2>工作经验<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>在数据工程和分析领域有一定的工作经验，参与过数据工程项目的规划、设计和执行</p></li>
+<li><p>有数据清洗、转换和整合的经验，熟悉ETL流程的开发和维护</p></li>
+<li><p>有数据库管理和优化的经验，能够处理大规模数据和进行性能优化</p></li>
+</ul>
+</section>
+<section id="id7">
+<h2>工作环境<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>所在组织的规模可以是中小型企业或大型企业</p></li>
+<li><p>行业可以是金融、零售、制造等各种行业</p></li>
+<li><p>数据规模和复杂性可以因组织规模和行业特点而有所不同</p></li>
+</ul>
+</section>
+<section id="id8">
+<h2>工具和技术<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>常用的数据工程工具可以是SQL工具、Python编程环境、Hadoop生态系统等</p></li>
+<li><p>常用的数据分析工具可以是Tableau、Power BI等</p></li>
+<li><p>编程语言可以是SQL、Python、Java等</p></li>
+<li><p>数据库可以是MySQL、PostgreSQL、MongoDB等</p></li>
+</ul>
+</section>
+<section id="id9">
+<h2>挑战和需求<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>面临的挑战可以是处理大规模数据的性能和效率问题</p></li>
+<li><p>需求可以是提高数据处理和查询效率，优化数据管道和数据仓库的架构</p></li>
+<li><p>对工具和平台的期待可以是提供稳定、可靠、易用的数据工程管理和协作平台，降低数据工程的开发和维护成本</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./personas"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="README.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">用户画像概述</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="analysts.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">数据分析师</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">职责</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">技能</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">信息需求</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">教育和背景</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">工作经验</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">工作环境</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">工具和技术</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">挑战和需求</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By 量潮科技
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
